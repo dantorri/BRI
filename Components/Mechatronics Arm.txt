@@ -1,0 +1,14 @@
+Mechatronics Arm
+
+
+Servo Horn Mounts, center to center
+
+MG180: 14.5mm
+
+MG90: 9mm
+
+Servo Mounts:
+
+MG180: 48 across, 10 wide
+
+MG90: 27.6mm
