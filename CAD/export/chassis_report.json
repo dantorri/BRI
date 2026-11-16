@@ -1,0 +1,618 @@
+{
+ "params": {
+  "motor_can_d": 36.8,
+  "motor_len": 72.6,
+  "motor_shaft_offset": 7.0,
+  "motor_shaft_proud": 22.0,
+  "motor_boss_d": 12.0,
+  "motor_boss_h": 6.5,
+  "motor_bolt_circle": 31.0,
+  "hub_d": 25.4,
+  "hub_t": 9.2,
+  "hub_bolt_circle": 19.05,
+  "wheel_d": 110.0,
+  "wheel_w": 45.0,
+  "wheel_gap": 3.0,
+  "wall_t": 5.0,
+  "inner_w": 170.0,
+  "inner_half_x": 30.0,
+  "fb_wall_t": 3.0,
+  "base_t": 4.0,
+  "base_top_z": -14.0,
+  "top_z": 30.0,
+  "pillar": 9.0,
+  "lock_r": 24.0,
+  "leg_len": 90.0,
+  "leg_t": 8.0,
+  "leg_gap": 1.0,
+  "leg_top_r": 30.0,
+  "leg_bot_r": 22.0,
+  "lock_angles": [
+   -40,
+   -20,
+   0,
+   20,
+   40
+  ],
+  "deck_x": 110.0,
+  "deck_y": 180.0,
+  "deck_t": 4.0,
+  "standoff_len": 45.0,
+  "standoff_xy": [
+   48.0,
+   83.0
+  ],
+  "block_bolt_xy": [
+   25.5,
+   80.5
+  ],
+  "batt_l": 108.0,
+  "batt_w": 36.0,
+  "batt_h": 26.0,
+  "tray_travel": 30.0,
+  "odrive_bolt_circle": 40.0,
+  "pi_holes": [
+   49.0,
+   58.0
+  ],
+  "cup_od": 100.0,
+  "cup_h": 60.0,
+  "cup_wall": 2.4,
+  "cup_floor": 4.0,
+  "m3_clear": 3.4,
+  "m3_insert": 4.0,
+  "m2_clear": 2.4,
+  "m25_clear": 2.9,
+  "m4_clear": 4.5
+ },
+ "derived": {
+  "track_mm": 249.0,
+  "outside_width_mm": 294.0,
+  "hip_axis_height_mm": 145.0,
+  "top_deck_height_mm": 277.0
+ },
+ "parts": {
+  "hip_block": {
+   "qty": 1,
+   "print_notes": "base down, no supports; 4 walls, 30 % infill",
+   "valid": true,
+   "solids": 1,
+   "volume_cm3": 120.3,
+   "bbox_mm": [
+    66.0,
+    180.0,
+    48.0
+   ]
+  },
+  "leg": {
+   "qty": 2,
+   "print_notes": "outer face down (as exported), no supports; 5 walls, 40 % infill; left and right are the same part",
+   "valid": true,
+   "solids": 1,
+   "volume_cm3": 46.8,
+   "bbox_mm": [
+    60.0,
+    135.0,
+    8.0
+   ]
+  },
+  "deck_electronics": {
+   "qty": 1,
+   "print_notes": "flat, IMU pad up",
+   "valid": true,
+   "solids": 1,
+   "volume_cm3": 74.7,
+   "bbox_mm": [
+    110.0,
+    180.0,
+    6.0
+   ]
+  },
+  "deck_battery": {
+   "qty": 1,
+   "print_notes": "flat",
+   "valid": true,
+   "solids": 1,
+   "volume_cm3": 66.8,
+   "bbox_mm": [
+    110.0,
+    180.0,
+    4.0
+   ]
+  },
+  "battery_tray": {
+   "qty": 1,
+   "print_notes": "floor down",
+   "valid": true,
+   "solids": 1,
+   "volume_cm3": 23.6,
+   "bbox_mm": [
+    42.0,
+    116.0,
+    17.5
+   ]
+  },
+  "deck_top": {
+   "qty": 1,
+   "print_notes": "flat",
+   "valid": true,
+   "solids": 1,
+   "volume_cm3": 66.6,
+   "bbox_mm": [
+    110.0,
+    180.0,
+    4.0
+   ]
+  },
+  "ballast_cup": {
+   "qty": 1,
+   "print_notes": "floor down; 3 walls is enough",
+   "valid": true,
+   "solids": 1,
+   "volume_cm3": 72.4,
+   "bbox_mm": [
+    100.0,
+    100.0,
+    60.0
+   ]
+  }
+ },
+ "interference": [],
+ "mass_with_ballast": {
+  "parts": [
+   {
+    "name": "hip_block",
+    "kind": "print",
+    "mass_g": 84.0,
+    "x": -0.0,
+    "y": 0.0,
+    "z": -1.8
+   },
+   {
+    "name": "deck_electronics",
+    "kind": "print",
+    "mass_g": 52.2,
+    "x": -0.3,
+    "y": -0.4,
+    "z": 32.1
+   },
+   {
+    "name": "deck_battery",
+    "kind": "print",
+    "mass_g": 46.6,
+    "x": 0.0,
+    "y": 0.0,
+    "z": 81.0
+   },
+   {
+    "name": "battery_tray",
+    "kind": "print",
+    "mass_g": 16.5,
+    "x": 0.0,
+    "y": 0.0,
+    "z": 87.6
+   },
+   {
+    "name": "deck_top",
+    "kind": "print",
+    "mass_g": 46.5,
+    "x": 0.0,
+    "y": 0.0,
+    "z": 130.0
+   },
+   {
+    "name": "ballast_cup",
+    "kind": "print",
+    "mass_g": 50.6,
+    "x": -0.0,
+    "y": -0.0,
+    "z": 151.1
+   },
+   {
+    "name": "leg_L",
+    "kind": "print",
+    "mass_g": 32.7,
+    "x": 0.0,
+    "y": 95.0,
+    "z": -34.2
+   },
+   {
+    "name": "hip_motor_L",
+    "kind": "ref",
+    "mass_g": 210.0,
+    "x": 0.0,
+    "y": 49.4,
+    "z": 6.9
+   },
+   {
+    "name": "wheel_motor_L",
+    "kind": "ref",
+    "mass_g": 210.0,
+    "x": 0.0,
+    "y": 55.4,
+    "z": -83.1
+   },
+   {
+    "name": "wheel_L",
+    "kind": "ref",
+    "mass_g": 130.0,
+    "x": 0.0,
+    "y": 124.5,
+    "z": -90.0
+   },
+   {
+    "name": "hip_hub_L",
+    "kind": "ref",
+    "mass_g": 7.0,
+    "x": -0.0,
+    "y": 103.6,
+    "z": 0.0
+   },
+   {
+    "name": "leg_R",
+    "kind": "print",
+    "mass_g": 32.7,
+    "x": -0.0,
+    "y": -95.0,
+    "z": -34.2
+   },
+   {
+    "name": "hip_motor_R",
+    "kind": "ref",
+    "mass_g": 210.0,
+    "x": -0.0,
+    "y": -49.4,
+    "z": 6.9
+   },
+   {
+    "name": "wheel_motor_R",
+    "kind": "ref",
+    "mass_g": 210.0,
+    "x": -0.0,
+    "y": -55.4,
+    "z": -83.1
+   },
+   {
+    "name": "wheel_R",
+    "kind": "ref",
+    "mass_g": 130.0,
+    "x": 0.0,
+    "y": -124.5,
+    "z": -90.0
+   },
+   {
+    "name": "hip_hub_R",
+    "kind": "ref",
+    "mass_g": 7.0,
+    "x": -0.0,
+    "y": -103.6,
+    "z": 0.0
+   },
+   {
+    "name": "battery",
+    "kind": "ref",
+    "mass_g": 180.0,
+    "x": 0.0,
+    "y": 0.0,
+    "z": 99.5
+   },
+   {
+    "name": "standoff_00",
+    "kind": "ref",
+    "mass_g": 2.5,
+    "x": -48.0,
+    "y": -83.0,
+    "z": 56.5
+   },
+   {
+    "name": "standoff_01",
+    "kind": "ref",
+    "mass_g": 2.5,
+    "x": -48.0,
+    "y": 83.0,
+    "z": 56.5
+   },
+   {
+    "name": "standoff_02",
+    "kind": "ref",
+    "mass_g": 2.5,
+    "x": 48.0,
+    "y": -83.0,
+    "z": 56.5
+   },
+   {
+    "name": "standoff_03",
+    "kind": "ref",
+    "mass_g": 2.5,
+    "x": 48.0,
+    "y": 83.0,
+    "z": 56.5
+   },
+   {
+    "name": "standoff_10",
+    "kind": "ref",
+    "mass_g": 2.5,
+    "x": -48.0,
+    "y": -83.0,
+    "z": 105.5
+   },
+   {
+    "name": "standoff_11",
+    "kind": "ref",
+    "mass_g": 2.5,
+    "x": -48.0,
+    "y": 83.0,
+    "z": 105.5
+   },
+   {
+    "name": "standoff_12",
+    "kind": "ref",
+    "mass_g": 2.5,
+    "x": 48.0,
+    "y": -83.0,
+    "z": 105.5
+   },
+   {
+    "name": "standoff_13",
+    "kind": "ref",
+    "mass_g": 2.5,
+    "x": 48.0,
+    "y": 83.0,
+    "z": 105.5
+   },
+   {
+    "name": "electronics",
+    "kind": "ref",
+    "mass_g": 150.0,
+    "x": 0.0,
+    "y": 0.0,
+    "z": 42.0
+   },
+   {
+    "name": "fasteners",
+    "kind": "ref",
+    "mass_g": 60.0,
+    "x": 0.0,
+    "y": 0.0,
+    "z": 40.0
+   },
+   {
+    "name": "ballast_fill",
+    "kind": "ref",
+    "mass_g": 1500.0,
+    "x": 0.0,
+    "y": 0.0,
+    "z": 156.0
+   }
+  ],
+  "body_mass_g": 2626.4,
+  "body_com_z_above_hip_mm": 108.7,
+  "both_legs_mass_g": 759.4,
+  "legs_com_z_mm": -79.7,
+  "total_mass_g": 3385.8
+ },
+ "mass_no_ballast": {
+  "parts": [
+   {
+    "name": "hip_block",
+    "kind": "print",
+    "mass_g": 84.0,
+    "x": -0.0,
+    "y": 0.0,
+    "z": -1.8
+   },
+   {
+    "name": "deck_electronics",
+    "kind": "print",
+    "mass_g": 52.2,
+    "x": -0.3,
+    "y": -0.4,
+    "z": 32.1
+   },
+   {
+    "name": "deck_battery",
+    "kind": "print",
+    "mass_g": 46.6,
+    "x": 0.0,
+    "y": 0.0,
+    "z": 81.0
+   },
+   {
+    "name": "battery_tray",
+    "kind": "print",
+    "mass_g": 16.5,
+    "x": 0.0,
+    "y": 0.0,
+    "z": 87.6
+   },
+   {
+    "name": "deck_top",
+    "kind": "print",
+    "mass_g": 46.5,
+    "x": 0.0,
+    "y": 0.0,
+    "z": 130.0
+   },
+   {
+    "name": "leg_L",
+    "kind": "print",
+    "mass_g": 32.7,
+    "x": 0.0,
+    "y": 95.0,
+    "z": -34.2
+   },
+   {
+    "name": "hip_motor_L",
+    "kind": "ref",
+    "mass_g": 210.0,
+    "x": 0.0,
+    "y": 49.4,
+    "z": 6.9
+   },
+   {
+    "name": "wheel_motor_L",
+    "kind": "ref",
+    "mass_g": 210.0,
+    "x": 0.0,
+    "y": 55.4,
+    "z": -83.1
+   },
+   {
+    "name": "wheel_L",
+    "kind": "ref",
+    "mass_g": 130.0,
+    "x": 0.0,
+    "y": 124.5,
+    "z": -90.0
+   },
+   {
+    "name": "hip_hub_L",
+    "kind": "ref",
+    "mass_g": 7.0,
+    "x": -0.0,
+    "y": 103.6,
+    "z": 0.0
+   },
+   {
+    "name": "leg_R",
+    "kind": "print",
+    "mass_g": 32.7,
+    "x": -0.0,
+    "y": -95.0,
+    "z": -34.2
+   },
+   {
+    "name": "hip_motor_R",
+    "kind": "ref",
+    "mass_g": 210.0,
+    "x": -0.0,
+    "y": -49.4,
+    "z": 6.9
+   },
+   {
+    "name": "wheel_motor_R",
+    "kind": "ref",
+    "mass_g": 210.0,
+    "x": -0.0,
+    "y": -55.4,
+    "z": -83.1
+   },
+   {
+    "name": "wheel_R",
+    "kind": "ref",
+    "mass_g": 130.0,
+    "x": 0.0,
+    "y": -124.5,
+    "z": -90.0
+   },
+   {
+    "name": "hip_hub_R",
+    "kind": "ref",
+    "mass_g": 7.0,
+    "x": -0.0,
+    "y": -103.6,
+    "z": 0.0
+   },
+   {
+    "name": "battery",
+    "kind": "ref",
+    "mass_g": 180.0,
+    "x": 0.0,
+    "y": 0.0,
+    "z": 99.5
+   },
+   {
+    "name": "standoff_00",
+    "kind": "ref",
+    "mass_g": 2.5,
+    "x": -48.0,
+    "y": -83.0,
+    "z": 56.5
+   },
+   {
+    "name": "standoff_01",
+    "kind": "ref",
+    "mass_g": 2.5,
+    "x": -48.0,
+    "y": 83.0,
+    "z": 56.5
+   },
+   {
+    "name": "standoff_02",
+    "kind": "ref",
+    "mass_g": 2.5,
+    "x": 48.0,
+    "y": -83.0,
+    "z": 56.5
+   },
+   {
+    "name": "standoff_03",
+    "kind": "ref",
+    "mass_g": 2.5,
+    "x": 48.0,
+    "y": 83.0,
+    "z": 56.5
+   },
+   {
+    "name": "standoff_10",
+    "kind": "ref",
+    "mass_g": 2.5,
+    "x": -48.0,
+    "y": -83.0,
+    "z": 105.5
+   },
+   {
+    "name": "standoff_11",
+    "kind": "ref",
+    "mass_g": 2.5,
+    "x": -48.0,
+    "y": 83.0,
+    "z": 105.5
+   },
+   {
+    "name": "standoff_12",
+    "kind": "ref",
+    "mass_g": 2.5,
+    "x": 48.0,
+    "y": -83.0,
+    "z": 105.5
+   },
+   {
+    "name": "standoff_13",
+    "kind": "ref",
+    "mass_g": 2.5,
+    "x": 48.0,
+    "y": 83.0,
+    "z": 105.5
+   },
+   {
+    "name": "electronics",
+    "kind": "ref",
+    "mass_g": 150.0,
+    "x": 0.0,
+    "y": 0.0,
+    "z": 42.0
+   },
+   {
+    "name": "fasteners",
+    "kind": "ref",
+    "mass_g": 60.0,
+    "x": 0.0,
+    "y": 0.0,
+    "z": 40.0
+   }
+  ],
+  "body_mass_g": 1075.8,
+  "body_com_z_above_hip_mm": 40.8,
+  "both_legs_mass_g": 759.4,
+  "legs_com_z_mm": -79.7,
+  "total_mass_g": 1835.2
+ },
+ "mass_notes": {
+  "print_density_g_cm3": 1.27,
+  "print_fill_factor": 0.55,
+  "electronics_g": 150.0,
+  "fasteners_g": 60.0,
+  "ballast_g": 1500.0
+ }
+}
