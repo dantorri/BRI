@@ -1,0 +1,7 @@
+# Captures written by the test loggers (raw text, CSV, verdicts, plots).
+logs/
+# Output of sim/build_and_replay.py (PC executables, simulated captures).
+sim/build/
+# Python byte-code caches.
+__pycache__/
+*.pyc

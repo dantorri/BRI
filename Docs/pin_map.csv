@@ -1,0 +1,43 @@
+teensy_pin,alt_function,net,direction,phase,connects_to,conditioning,notes
+0,,ENC_LW_A,in,1,Left wheel encoder A (yellow),SN74LVC245A ch1 (A1->B1),QuadEncoder ch1 phase A capable
+1,,ENC_LW_B,in,1,Left wheel encoder B (white),SN74LVC245A ch2 (A2->B2),QuadEncoder ch1 phase B capable
+2,,ENC_RW_A,in,1,Right wheel encoder A (yellow),SN74LVC245A ch3 (A3->B3),QuadEncoder ch2
+3,,ENC_RW_B,in,1,Right wheel encoder B (white),SN74LVC245A ch4 (A4->B4),QuadEncoder ch2
+4,,DIR_LW,out,1,Left wheel G2 DIR,direct 3.3 V logic,DIR high = current OUTA->OUTB
+5,,DIR_RW,out,1,Right wheel G2 DIR,direct 3.3 V logic,Do not use pin 5 as an encoder input (shares XBAR input with pin 0)
+6,PWM,PWM_LW,out,1,Left wheel G2 PWM,direct 3.3 V logic,20 kHz; same FlexPWM timer as pin 9
+7,,ENC_LH_A,in,2,Left hip encoder A,SN74LVC245A ch5 (A5->B5),QuadEncoder ch3
+8,,ENC_LH_B,in,2,Left hip encoder B,SN74LVC245A ch6 (A6->B6),QuadEncoder ch3
+9,PWM,PWM_RW,out,1,Right wheel G2 PWM,direct 3.3 V logic,20 kHz
+10,CS,SPI_CS (reserved),-,reserved,Future SPI device,-,Keep free
+11,MOSI,SPI_MOSI (reserved),-,reserved,Future SPI device,-,Keep free
+12,MISO,SPI_MISO (reserved),-,reserved,Future SPI device,-,Keep free
+13,LED/SCK,LED_HEARTBEAT,out,1,On-board LED,-,Becomes SCK if SPI is used later
+14,A0,CS_LW,analog in,1,Left wheel G2 CS,direct; no capacitor on CS,50 mV + 20 mV/A
+15,A1,CS_RW,analog in,1,Right wheel G2 CS,direct; no capacitor on CS,50 mV + 20 mV/A
+16,A2,CS_LH,analog in,2,Left hip G2 CS,direct; no capacitor on CS,
+17,A3,CS_RH,analog in,2,Right hip G2 CS,direct; no capacitor on CS,
+18,SDA,I2C_SDA,i/o,1,IMU SDA (ToF later),pull-up to 3.3 V only,Wire bus
+19,SCL,I2C_SCL,out,1,IMU SCL (ToF later),pull-up to 3.3 V only,Wire bus
+20,A6,VBAT_SENSE,analog in,1,Battery bus after fuse and disconnect,33 k / 10 k divider + 100 nF to GND,12.6 V -> 2.93 V
+21,,MOTOR_EN_SENSE,in,1,MOTOR_EN net (wheel SLP pins),direct,Reads back the enable net; low while kill switch is in STOP
+22,CTX1,CAN1_TX (reserved),-,3,Future CAN transceiver TXD -> ODrive S1,3.3 V CAN transceiver,Jump phase
+23,CRX1,CAN1_RX (reserved),-,3,Future CAN transceiver RXD,3.3 V CAN transceiver,Jump phase
+24,SCL2/TX6,I2C2_SCL (reserved),-,reserved,Second I2C bus or Serial6,-,Keep free
+25,SDA2/RX6,I2C2_SDA (reserved),-,reserved,Second I2C bus or Serial6,-,Keep free
+26,,DIR_LH,out,2,Left hip G2 DIR,direct 3.3 V logic,
+27,,DIR_RH,out,2,Right hip G2 DIR,direct 3.3 V logic,
+28,PWM,PWM_LH,out,2,Left hip G2 PWM,direct 3.3 V logic,20 kHz; same FlexPWM timer as pin 29
+29,PWM,PWM_RH,out,2,Right hip G2 PWM,direct 3.3 V logic,20 kHz
+30,,ENC_RH_A,in,2,Right hip encoder A,SN74LVC245A ch7 (A7->B7),QuadEncoder ch4
+31,,ENC_RH_B,in,2,Right hip encoder B,SN74LVC245A ch8 (A8->B8),QuadEncoder ch4
+32,,HIP_EN,out,2,Hip G2 SLP pins (both),1 k series + 10 k pull-down; kill switch pole 2,High = hip drivers awake
+33,,MOTOR_EN,out,1,Wheel G2 SLP pins (both),1 k series + 10 k pull-down; kill switch pole 1,High = wheel drivers awake
+34,RX8,PI_UART_RX (reserved),-,4,Future Pi 5 UART TX,3.3 V both sides,USB is the primary Pi link
+35,TX8,PI_UART_TX (reserved),-,4,Future Pi 5 UART RX,3.3 V both sides,
+36,,IMU_INT,in,1 (optional),IMU INT pin,direct (3.3 V),Data-ready interrupt; not needed for the bench tests
+37,,SPARE,-,reserved,Status LED / buzzer,-,
+38,A14,FLT_LW,in,1,"Left wheel G2 FLT (open drain, low = fault)",INPUT_PULLUP to 3.3 V,
+39,A15,FLT_RW,in,1,Right wheel G2 FLT,INPUT_PULLUP to 3.3 V,
+40,A16,FLT_LH,in,2,Left hip G2 FLT,INPUT_PULLUP to 3.3 V,
+41,A17,FLT_RH,in,2,Right hip G2 FLT,INPUT_PULLUP to 3.3 V,
